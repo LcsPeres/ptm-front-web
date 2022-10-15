@@ -1,0 +1,7 @@
+export enum TendenciaEnum {
+    NAO_IRA_MUDAR = 1,
+    IRA_PIORAR_LONGO_PRAZO = 2,
+    IRA_PIORAR_MEDIO_PRAZO = 3,
+    IRA_PIORAR_CURTO_PRAZO = 4,
+    IRA_PIORAR_RAPIDAMENTE = 5
+}

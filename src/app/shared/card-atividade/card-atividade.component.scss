@@ -1,0 +1,39 @@
+#card {
+    margin: 5px 0;
+    border-top: 3px rgb(212, 212, 212) dashed;
+    position: relative;
+
+    // COLORS
+    &.color-white {
+        background: white;
+
+        .task-title {
+            background: rgb(212, 212, 212);
+            padding-left: 5px;
+        }
+    }
+
+    &.color-red {
+        background: white;
+
+        .task-title {
+            background: rgb(80, 80, 80);
+            padding-left: 5px;
+            color: red;
+        }
+    }
+
+    &.color-yellow {
+        background: white;
+
+        .task-title {
+            background: rgb(80, 80, 80);
+            padding-left: 5px;
+            color: yellow;
+        }
+    }
+}
+
+::ng-deep .cdk-drag-preview {
+    background-color: white;
+}

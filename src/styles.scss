@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    margin: auto;
+    min-height: 100%;
+    background: rgb(236, 236, 236);
+}
+
+.content {
+    max-width: 1440px;
+}
+
+html, body { height: 100%; }
+
+// TEXT
+.title-page {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title-medium {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-medium {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+// SIMPLE ALIGN
+.center {
+    text-align: center;
+}
+
+// MARGIN
+.mb-8 { margin-bottom: 8px }
+.mb-16 { margin-bottom: 16px }
+.mb-24 { margin-bottom: 24px }
+.mb-32 { margin-bottom: 32px }
+
+// PADDING
+.pt-8 { padding-top: 8px }
+.pt-16 { padding-top: 16px }
+.pt-24 { padding-top: 24px }
+
+// CDK 
+.cdk-drag-preview {
+    margin: 5px 0;
+    border-top: 3px rgb(212, 212, 212) dashed;
+    position: relative;
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); 
+}

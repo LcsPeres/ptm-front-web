@@ -1,0 +1,54 @@
+#header {
+    background: #45A4C2;
+}
+
+header, #nav-header {
+    color: white;
+    padding: 24px;
+}
+
+#nav-header {
+    padding: 0 24px;
+    background: #3D97B4;
+    
+    #botoes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: auto;
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            cursor: pointer;
+            padding: 16px 0;
+    
+            p {
+                margin: 0;
+            }
+        }
+    
+        div:last-of-type {
+            p {
+                padding: 0 16px;
+            }
+    
+            p:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+
+}
+
+.content {
+    text-align: center;
+}
+
+@media all and (min-width: 1450px){
+    #botoes {
+        padding: 0 24px;
+    }
+}

@@ -1,0 +1,92 @@
+<div class="content">
+
+    <h2 class="title center mb-16">{{ cards.boardName }}</h2>
+
+    <div id="blocks" *ngIf="cards.hasBlocks()">
+        <div>
+            Você possui {{ cards.blocks?.length }} atividades bloqueadas!
+        </div>
+    </div>
+
+    <nav>
+        <p (click)="addNewTask()">
+            Add task
+        </p>
+    </nav>
+
+    <div id="board">
+
+        <div id="backlog" class="columns">
+            <div class="text-medium center card-title">Backlog</div>
+
+            <div 
+                cdkDropList
+                #backlogList="cdkDropList"
+                cdkDropListSortingDisabled
+                [cdkDropListData]="cards.backlog"
+                class="example-list lista"
+                (cdkDropListDropped)="drop($event)"
+                [cdkDropListConnectedTo]="[backlogList, wipList, testList, doneList]">
+
+                <div *ngFor="let task of cards.backlog" cdkDrag>
+                    <card-atividade [task]="task"></card-atividade>
+                </div>
+            </div>
+        </div>
+
+        <div id="wip" class="columns">
+            <div class="text-medium center card-title">In progress</div>
+
+            <div 
+                cdkDropList
+                #wipList="cdkDropList"
+                cdkDropListSortingDisabled
+                [cdkDropListData]="cards.wip"
+                class="example-list lista"
+                (cdkDropListDropped)="drop($event)"
+                [cdkDropListConnectedTo]="[backlogList, wipList, testList, doneList]">
+
+                <div *ngFor="let task of cards.wip" cdkDrag>
+                    <card-atividade [task]="task"></card-atividade>
+                </div>
+            </div>
+        </div>
+
+        <div id="test" class="columns {{ hasTest ? '' : 'd-none'}}">
+            <div class="text-medium center card-title">Testing</div>
+
+            <div 
+                cdkDropList
+                #testList="cdkDropList"
+                cdkDropListSortingDisabled
+                [cdkDropListData]="cards.test"
+                class="example-list lista"
+                (cdkDropListDropped)="drop($event)"
+                [cdkDropListConnectedTo]="[backlogList, wipList, testList, doneList]">
+
+                <div *ngFor="let task of cards.test" cdkDrag>
+                    <card-atividade [task]="task"></card-atividade>
+                </div>
+            </div>
+        </div>
+
+        <div id="done" class="columns">
+            <div class="text-medium center card-title">Done</div>
+
+            <div 
+                cdkDropList
+                #doneList="cdkDropList"
+                cdkDropListSortingDisabled
+                [cdkDropListData]="cards.done"
+                class="example-list lista"
+                (cdkDropListDropped)="drop($event)"
+                [cdkDropListConnectedTo]="[backlogList, wipList, testList, doneList]">
+
+                <div *ngFor="let task of cards.done" cdkDrag>
+                    <card-atividade [task]="task"></card-atividade>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
