@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
 
-  url_server: "http://3.84.0.209:8080/ptm-server/"
+  url_server: "http://ptmback-env.eba-826vkfmr.sa-east-1.elasticbeanstalk.com/ptm-server/"
 };

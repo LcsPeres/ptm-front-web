@@ -10,7 +10,7 @@ export class RequestInterceptorService implements HttpInterceptor {
   constructor() { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpSentEvent
-    | HttpHeaderResponse | HttpProgressEvent | HttpResponse<any> | HttpEvent<any>> {
+   | HttpHeaderResponse | HttpProgressEvent | HttpResponse<any> | HttpEvent<any>> {
 
     req = req.clone({
       setHeaders: {
